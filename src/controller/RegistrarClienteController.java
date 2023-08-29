@@ -2,7 +2,9 @@ package controller;
 
 	import java.net.URL;
 	import java.util.ResourceBundle;
-	import javafx.event.ActionEvent;
+
+import application.Main;
+import javafx.event.ActionEvent;
 	import javafx.fxml.FXML;
 	import javafx.scene.control.Button;
 	import javafx.scene.control.ComboBox;
@@ -52,6 +54,8 @@ package controller;
 	    @FXML
 	    private TextField txtTelefonoCliente;
 
+		private Main main;
+
 	    @FXML
 	    void AgregarRegistro(ActionEvent event) {
 
@@ -74,10 +78,17 @@ package controller;
 
 	    @FXML
 	    void initialize() {
-	     
+
 	    }
+
+
+
+		public void setApplication(Main main) {
+			this.main=main;
+
+		}
 
 	}
 
 
-}
+

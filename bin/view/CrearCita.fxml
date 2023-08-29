@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CrearCita">
    <children>
       <Label layoutX="261.0" layoutY="14.0" text="Crear Cita">
          <font>
@@ -29,7 +28,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Button fx:id="btnAgendarCita" layoutX="261.0" layoutY="322.0" mnemonicParsing="false" text="Asignar cita" />
+      <Button fx:id="btnAgendarCita" layoutX="261.0" layoutY="322.0" mnemonicParsing="false" onAction="#agendarCita" text="Asignar cita" />
       <DatePicker fx:id="dateCita" layoutX="187.0" layoutY="212.0" />
       <Label layoutX="86.0" layoutY="216.0" text="Fecha de la cita:">
          <font>

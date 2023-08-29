@@ -2,9 +2,12 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class InicioController {
 
@@ -26,22 +29,43 @@ public class InicioController {
     @FXML
     private Button btnSalir;
 
+	 Main main;
+
+
+
     @FXML
     void crearCita(ActionEvent event) {
+    	crearCitaAction();
 
     }
 
-    @FXML
+    private void crearCitaAction() {
+		this.main.mostrarCrearCita();
+	}
+
+	@FXML
     void historial(ActionEvent event) {
+		crearHistorialAction();
 
     }
 
-    @FXML
+    private void crearHistorialAction() {
+		this.main.mostrarHistoriaClinica();
+	}
+
+	@FXML
     void registro(ActionEvent event) {
 
+    registroAction();
+
     }
 
-    @FXML
+    private void registroAction() {
+		this.main.mostrarRegistroCliente();
+
+	}
+
+	@FXML
     void salir(ActionEvent event) {
 
     }
@@ -49,5 +73,16 @@ public class InicioController {
     @FXML
     void initialize() {
     }
+
+	public void setStage(Stage primaryStage) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	public void setApplication(Main main) {
+		this.main=main;
+
+	}
 
 }
