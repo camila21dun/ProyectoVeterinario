@@ -1,6 +1,8 @@
 package model;
 
 public class Cliente extends Persona {
+	
+	private String cedula;
 
 	public Cliente() {
 		super();
@@ -12,6 +14,24 @@ public class Cliente extends Persona {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	
+	public String getCedula() {
+		return cedula;
+	}
+
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
+	}
+
+	public boolean verificarCedula(String cedula) {
+		if(getCedula().equals(cedula)){
+			return true;
+		}
+		return false;
+	}
+
 	
 	
 

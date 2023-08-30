@@ -10,7 +10,9 @@ import controller.RegistrarClienteController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import model.Cliente;
 import model.Clinica;
+
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -20,6 +22,8 @@ import javafx.scene.layout.BorderPane;
 public class Main extends javafx.application.Application {
 
 	Stage stage;
+
+	Clinica clinica = new Clinica("sirve?");
 
 	 @Override
 	    public void start(Stage primaryStage) throws IOException {
@@ -72,7 +76,7 @@ public class Main extends javafx.application.Application {
 	            throw new RuntimeException(e);
 	        }
 	 }
-	 
+
 	 public void mostrarCrearCita(){
 
 		 try {
@@ -94,7 +98,7 @@ public class Main extends javafx.application.Application {
 	            throw new RuntimeException(e);
 	        }
 	 }
-	 
+
 	 public void mostrarHistoriaClinica(){
 
 		 try {
@@ -117,13 +121,28 @@ public class Main extends javafx.application.Application {
 	        }
 	 }
 
-	 
-	 
+
+
 	    public static void main(String[] args) {
 	        launch(args);
 	    }
 
-		
+	    public boolean verificarCedula(String cedula) {
+
+			return clinica.verificarCedula(cedula);
+		}
+
+	    public Cliente agregarCliente(String nombre, String correo, String telefono, String cedula) throws Exception {
+			return clinica.crearRegistro(nombre, correo, telefono, cedula);
+		}
+
+	    public boolean eliminarRegistro(String codigo) {
+			return clinica.eliminarRegistro(codigo);
+
+		}
+
+
+
 
 
 
